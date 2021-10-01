@@ -8,9 +8,6 @@ exports.buscar_nombre = function (nombre) {
     return data;
 }
 
-
-//se crear un arreglo vacio en el cual se guardan los tipos de pokemons que existen
-//utilizando el foreach
 exports.enlistartipos = function () {
     let arreglo = [];
     var c = 0;
@@ -26,7 +23,6 @@ exports.enlistartipos = function () {
     return resultados;
 }
 
-//aca al escoger el tipo usamos la funcion filter para filtar el tipo del pokemon
 exports.buscar_tipos = function (tipo) {
     let arreglo = db_pokedex.filter((item, index) => {
 
@@ -37,7 +33,6 @@ exports.buscar_tipos = function (tipo) {
     return arreglo;
 }
 
-//aca le mandamos los 2 parametros y con la funcion filter va a buscar los pokemons que esten en ese rango de puntos
 exports.puntosbase = function (min, max) {
     let data_tipos = db_pokedex.filter((item, index) => {
 
@@ -47,7 +42,6 @@ exports.puntosbase = function (min, max) {
     return data_tipos;
 }
 
-//aca al selecionar por tamano con la funcion sort nos sirve para ordenarlos por el mas grande y pesado
 exports.tamanio = function () {
     let arreglo = db_pokedex.sort(((a, b) => {
         return b.height - a.height && b.weight - a.weight
