@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo Pokemon</title>
+    <link rel="stylesheet" href="../diseño.css" type="text/css" />
+  </head>
+  
+  <body>
+    <form action="Nombre_pokemon" method="post">
+      <label for="">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required/>
+      <input type="submit" />
+    </form>
+
+    <form action="puntos_experiencia" method="post">
+      <label for="">Puntos de experiencia</label>
+      <input type="number" id="min_base" name="min_base" placeholder="Minimos" required/>
+      <input type="number" id="max_base" name="max_base" placeholder="Maximos" required/>
+      <input type="submit" />
+    </form>
+
+    <form action="Tam_pokemon" method="post">
+      <label for="">Ordenar por tamaño</label>
+      <input type="submit" />
+    </form>
+    
+    <form action="poketipos" method="post"> 
+      <div id="lista">
+        <label
+          >Ver por tipo de pokemon:
+          <select name="t_pokemon" id="t_pokemon">
+            <option value="">Selecciona el tipo de pokemon</option>
+            <% for(let i=0; i<data.length; i++) {%>
+            <option value=<%= data[i]%>> <%= data[i] %></option>
+            <% }; %>
+          </select>
+        </label>
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+
+</html>

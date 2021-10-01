@@ -1,0 +1,28 @@
+<!-- aqui se utilizo el modulo de ejs que este sirve para poder agregar codigo logico a html 
+y asi es como recoremos para mostrarles los nombres y sus tipos  
+
+esto lo digo en todos los .html-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemons - <%= tipo%></title>
+    <link rel="stylesheet" href="../diseño.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="tipos_pokemon">
+      <% data.forEach(element => {%>
+        <div class="tipos">
+            <label>
+              <img src=<%= element.image%> />
+            </label>
+            <p><%= element.name%></p>
+          </div>
+        <% }) %> 
+    </div>
+  </body>
+
+</html>

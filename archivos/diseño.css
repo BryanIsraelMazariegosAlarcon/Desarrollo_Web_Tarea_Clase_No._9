@@ -1,0 +1,10 @@
+form {
+  margin: 50px;
+  padding: 15px;
+  height: 30px;
+  width: 55%;
+  position: relative;
+  left: 180px;
+  background-color: rgb(70, 138, 177);
+  border-radius: 4px;
+}
