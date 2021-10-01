@@ -1,7 +1,3 @@
-//son la rutas a las que se dirigen cuando escogemos alguna opcion y la enviamos
-//y tambien esta los metodos post cuando se le da enviar
-//y get cuando inician la pagina
-
 const express = require('express');
 const router = express.Router();
 var rutas = require('../clases/Rutas.js');
